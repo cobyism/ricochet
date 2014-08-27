@@ -1,0 +1,28 @@
+---
+- homebrew_tap: tap=caskroom/fonts
+- name: Install fonts
+  homebrew_cask: name={{ item }}
+  with_items:
+    # Monospace fonts
+    - font-inconsolata
+    - font-input
+    - font-anonymous-pro
+    - font-source-code-pro
+    # - font-pt-mono # SHA mismatch
+
+    # Variable width fonts
+    - font-lato
+    - font-open-sans
+    - font-open-sans-condensed
+    - font-montserrat
+    - font-source-sans-pro
+    - font-source-serif-pro
+    - font-pt-sans
+    - font-pt-serif
+    - font-noto-sans
+    - font-noto-serif
+    - font-droid-sans
+    - font-droid-serif
+    - font-roboto
+    - font-roboto-slab
+    - font-titillium-web

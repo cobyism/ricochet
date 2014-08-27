@@ -1,0 +1,103 @@
+---
+- name: Install Homebrew Casks
+  homebrew_cask: name={{ item }}
+  with_items:
+    - alfred
+    - arq
+    - atom
+    - bartender
+    - bettertouchtool
+    - chicken
+    - cloud
+    - coda
+    - colloquy
+    - cyberduck
+    - daisydisk
+    - dropbox
+    - ffmpegx
+    - firefox
+    - flux
+    - gfxcardstatus
+    - github
+    - gitx
+    - google-chrome
+    - imageoptim
+    - istat-menus
+    - iterm2
+    - keyboard-cleaner
+    - karabiner # used to be called keyremap4macbook
+    - kindle
+    - libreoffice
+    - little-snitch
+    - macdown
+    - macvim
+    - node-webkit
+    - omnifocus
+    - omnigraffle
+    - omnioutliner
+    - onepassword
+    - opera
+    - rdio
+    - rescuetime
+    - screenhero
+    - seil
+    - sequel-pro
+    - sizeup
+    - skype
+    - slack
+    - sourcetree
+    - sublime-text
+    - the-unarchiver
+    - torbrowser
+    - transmission
+    - transmit
+    - truecrypt
+    - virtualbox
+    - viscosity
+    - vlc
+    - vmware-fusion
+    - wireshark
+    - xscope
+    # - acorn
+    # - adium
+    # - adobe-creative-cloud
+    # - adobe-photoshop-lightroom
+    # - airmail
+    # - appcleaner
+    # - appium
+    # - blender
+    # - brackets
+    # - caffeine
+    # - dash
+    # - gifrocket
+    # - handbrake
+    # - hiss
+    # - inkscape
+    # - istumbler
+    # - kaleidoscope
+    # - kiwi
+    # - layervault
+    # - librecad
+    # - licecap
+    # - macbreakz
+    # - mailplane
+    # - manager
+    # - moom
+    # - openscad
+    # - owncloud
+    # - p4merge
+    # - paparazzi!
+    # - rightzoom
+    # - selfcontrol
+    # - shuttle
+    # - sketch
+    # - slate
+    # - sparrow
+    # - spotify
+    # - synergy
+    # - textmate
+    # - things
+    # - thunderbird
+    # - trailer
+    # - wedge
+    # - xmind

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ansible-playbook ricochet.yml -i ricochet-hosts
