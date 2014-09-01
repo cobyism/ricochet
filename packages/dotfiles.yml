@@ -1,0 +1,14 @@
+---
+- name: Symlink dotfiles into place
+  file: src=~/code/ricochet/dotfiles/{{ item }}
+        dest=~/{{ item }}
+        state=link
+  with_items:
+    - .js
+    - .maid
+    - .gemrc
+    - .gitconfig
+    - .gitignore
+    - .guardrc
+    - .irbrc
+    - tmux.conf

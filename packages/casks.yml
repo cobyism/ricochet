@@ -3,6 +3,7 @@
   homebrew_cask: name={{ item }}
   with_items:
     - alfred
+    - appcleaner
     - arq
     - atom
     - bartender
@@ -22,6 +23,7 @@
     - gitx
     - google-chrome
     - gravit
+    - handbrake
     - imageoptim
     - istat-menus
     - iterm2
@@ -33,6 +35,7 @@
     - macdown
     - macvim
     - node-webkit
+    - nosleep
     - omnifocus
     - omnigraffle
     - omnioutliner
@@ -48,6 +51,7 @@
     - slack
     - sourcetree
     - sublime-text
+    - synergy
     - the-unarchiver
     - torbrowser
     - transmission
@@ -71,7 +75,6 @@
     # - caffeine
     # - dash
     # - gifrocket
-    # - handbrake
     # - hiss
     # - inkscape
     # - istumbler

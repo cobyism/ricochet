@@ -11,7 +11,11 @@
     - heroku-toolbelt
     - htop-osx
     - hugo
+    - ntfs-3g
+    - reattach-to-user-namespace # required for tmux!
+    - the_silver_searcher
     - tig
     - tmux
+    - watch
     - wget
     - zsh

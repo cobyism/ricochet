@@ -1,10 +1,11 @@
 ---
 - hosts: localhost
   tasks:
-    # - include: packages/osx.yml
-    # - include: packages/brews.yml
-    # - include: packages/gems.yml
-    - include: packages/npms.yml
-    # - include: packages/casks.yml
-    - include: packages/cronjobs.yml
-    # - include: packages/resources.yml
+    - include: packages/brews.yml     tags=apps
+    - include: packages/casks.yml     tags=apps
+    - include: packages/cronjobs.yml  tags=setup
+    - include: packages/dotfiles.yml  tags=dotfiles
+    - include: packages/gems.yml      tags=dev
+    - include: packages/npms.yml      tags=dev
+    - include: packages/osx.yml       tags=setup
+    - include: packages/resources.yml tags=setup
