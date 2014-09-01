@@ -4,8 +4,8 @@ An experiment in automating my laptop’s setup with [Ansible](http://docs.ansib
 
 Things that this includes:
 
-- [Homebrew](http://brew.sh/) packages.
-- [Homebrew Cask](http://caskroom.io/) applications.
+- [Homebrew](./packages/brews.yml) packages.
+- [Cask](./packages/casks.yml) applications.
 - Automated [file organisation](./dotfiles/.maid/rules.rb) with [maid](https://github.com/benjaminoakes/maid).
 - Installation of my [dotfiles](./dotfiles).
 - Organising my [shell environment](./zsh).
