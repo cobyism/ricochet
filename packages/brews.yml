@@ -1,4 +1,6 @@
 ---
+- name: Update Homebrew first
+  homebrew: update_homebrew=yes
 - name: Install Homebrew Packages
   homebrew: name={{ item }}
   with_items:
@@ -8,6 +10,7 @@
     - docker
     - gh
     - git
+    - go
     - heroku-toolbelt
     - htop-osx
     - hugo

@@ -28,7 +28,9 @@ elif [ "$1" == "help" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]
     print_help
 elif [ "$1" == "all" ]
   then
+    echo "One with the works, coming right up :)"
     ansible-playbook ricochet.yml
 else
+  echo "Just the $1 tasks? So be it."
   ansible-playbook ricochet.yml --tags "$1"
 fi

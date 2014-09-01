@@ -1,6 +1,6 @@
 ---
 - name: Install Node Packages
-  npm: name={{ item }} state=latest global=yes
+  npm: name={{ item }} state=present global=yes
   with_items:
     - bower
     - coffee-script
