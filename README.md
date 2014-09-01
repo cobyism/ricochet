@@ -1,6 +1,6 @@
 # Ricochet
 
-An experiment in managing laptop with [Ansible](http://docs.ansible.com/).
+An experiment in automating my laptop’s setup with [Ansible](http://docs.ansible.com/).
 
 Things that this includes:
 
