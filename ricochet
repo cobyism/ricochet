@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-echo
+printf "\n\e[31m"
 echo "--------------"
 echo "|  RICOCHET  |"
 echo "--------------"
-echo
+printf "\033[0m\n"
 
 print_help(){
   echo

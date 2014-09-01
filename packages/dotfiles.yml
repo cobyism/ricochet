@@ -1,5 +1,11 @@
 ---
-- name: Symlink dotfiles into place
+- name: Clone oh-my-zsh repo
+  git: repo=https://github.com/robbyrussell/oh-my-zsh.git dest=~/.oh-my-zsh
+
+- name: Clone my old dotfiles repos
+  git: repo=https://github.com/cobyism/dotfiles.git dest=~/code/dotfiles
+
+- name: Symlink dotfiles from this repo into place
   file: src=~/code/ricochet/dotfiles/{{ item }}
         dest=~/{{ item }}
         state=link
@@ -12,3 +18,6 @@
     - .guardrc
     - .irbrc
     - tmux.conf
+
+- name: Set zsh as default shell
+  user: name=coby shell=/bin/zsh
