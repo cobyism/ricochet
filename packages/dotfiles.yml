@@ -17,7 +17,5 @@
     - .gitignore
     - .guardrc
     - .irbrc
+    - .zshrc
     - tmux.conf
-
-- name: Set zsh as default shell
-  user: name=coby shell=/bin/zsh
