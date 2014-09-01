@@ -1,0 +1,8 @@
+---
+- name: Install Node Packages
+  npm: name={{ item }} state=latest global=yes
+  with_items:
+    - bower
+    - coffee-script
+    - gulp
+    - yo

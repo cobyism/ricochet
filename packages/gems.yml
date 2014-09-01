@@ -1,0 +1,8 @@
+---
+- name: Install Ruby Gems
+  gem: name={{ item }} state=latest
+  with_items:
+    - maid
+    - dimensions # For maid
+    - jekyll
+    - github-pages

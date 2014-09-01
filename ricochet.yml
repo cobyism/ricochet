@@ -1,7 +1,10 @@
 ---
 - hosts: localhost
   tasks:
-    - include: packages/brews.yml
-    - include: packages/casks.yml
-    - name: Put Karabiner (formerly KeyRemap4MacBook) private.xml in place
-      template: src=./templates/karabiner/private.xml dest=~/Library/Application Support/KeyRemap4MacBook/private.xml
+    # - include: packages/osx.yml
+    # - include: packages/brews.yml
+    # - include: packages/gems.yml
+    - include: packages/npms.yml
+    # - include: packages/casks.yml
+    - include: packages/cronjobs.yml
+    # - include: packages/resources.yml

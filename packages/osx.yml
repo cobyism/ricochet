@@ -1,0 +1,225 @@
+---
+# Mostly just shamelessly stolen from:
+# https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+
+- name: Increase window resize speed for Cocoa applications
+  shell: defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+- name: Expand save and print panels by default
+  shell: defaults write NSGlobalDomain {{ item }} -bool true
+  with_items:
+    - NSNavPanelExpandedStateForSaveMode
+    - NSNavPanelExpandedStateForSaveMode2
+    - PMPrintingExpandedStateForPrint
+    - PMPrintingExpandedStateForPrint2
+
+- name: Save to disk (not to iCloud) by default
+  shell: defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+- name: Automatically quit printer app once the print jobs complete
+  shell: defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+- name: Disable the "Are you sure you want to open this application?" dialog
+  shell: defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+- name: Disable Resume system-wide
+  shell: defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+
+- name: Restart automatically if the computer freezes
+  shell: sudo systemsetup -setrestartfreeze on
+
+- name: Check for software updates daily, not just once per week
+  shell: defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+- name: Disable smart quotes as they’re annoying when typing code
+  shell: defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+- name: Disable smart dashes as they’re annoying when typing code
+  shell: defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# - name: Trackpad - enable tap to click for this user and for the login screen
+#   - shell: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#   - shell: defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#   - shell: defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+- name: Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
+  shell: defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+- name: Use scroll gesture with the Ctrl (^) modifier key to zoom
+  shell: defaults write com.apple.universalaccess {{ item }}
+  with_items:
+    - closeViewScrollWheelToggle -bool true
+    - HIDScrollZoomModifierMask -int 262144
+    - closeViewZoomFollowsFocus -bool true # Follow the keyboard focus while zoomed in
+
+- name: Disable press-and-hold for keys in favor of key repeat
+  shell: defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+- name: Require password immediately after sleep or screen saver begins
+  shell: defaults write com.apple.screensaver {{ item }}
+  with_items:
+    - askForPassword -int 1
+    - askForPasswordDelay -int 0
+
+- name: Save screenshots to the desktop
+  shell: defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+
+- name: Save screenshots in PNG format (other options are BMP, GIF, JPG, PDF, TIFF)
+  shell: defaults write com.apple.screencapture type -string "png"
+
+- name: Show icons for hard drives, servers, and removable media on the desktop
+  shell: defaults write com.apple.finder {{ item }} -bool true
+  with_items:
+    - ShowExternalHardDrivesOnDesktop
+    - ShowHardDrivesOnDesktop
+    - ShowMountedServersOnDesktop
+    - ShowRemovableMediaOnDesktop
+
+- name: Finder - hide hidden files by default
+  shell: defaults write com.apple.finder AppleShowAllFiles -bool false
+
+- name: Finder - show all filename extensions
+  shell: defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+- name: Finder - show status bar
+  shell: defaults write com.apple.finder ShowStatusBar -bool true
+
+- name: Finder - show path bar
+  shell: defaults write com.apple.finder ShowPathbar -bool true
+
+- name: Finder - allow text selection in Quick Look
+  shell: defaults write com.apple.finder QLEnableTextSelection -bool true
+
+- name: When performing a search, search the current folder by default
+  shell: defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+- name: Disable the warning when changing a file extension
+  shell: defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+- name: Enable spring loading for directories
+  shell: defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+- name: Remove the spring loading delay for directories
+  shell: defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
+- name: Avoid creating .DS_Store files on network volumes
+  shell: defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+- name: Disable disk image verification
+  shell: defaults write com.apple.frameworks.diskimages {{ item }} -bool true
+  with_items:
+    - skip-verify
+    - skip-verify-locked
+    - skip-verify-remote
+
+- name: Use list view in all Finder windows by default. Codes for other modes are `icnv`, `clmv`, `Flwv`
+  shell: defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+- name: Disable the warning before emptying the Trash, and do it securely
+  shell: defaults write com.apple.finder {{ item }}
+  with_items:
+    - WarnOnEmptyTrash -bool false
+    - EmptyTrashSecurely -bool true
+
+- name: Show the ~/Library folder
+  shell: chflags nohidden ~/Library
+
+- name: Expand the following File Info panes - "General", "Open with", and "Sharing & Permissions"
+  shell: defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true
+
+- name: Set the icon size of Dock items to 36 pixels
+  shell: defaults write com.apple.dock tilesize -int 36
+
+- name: Minimize windows into their application’s icon
+  shell: defaults write com.apple.dock minimize-to-application -bool true
+
+- name: Enable spring loading for all Dock items
+  shell: defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
+- name: Show indicator lights for open applications in the Dock
+  shell: defaults write com.apple.dock show-process-indicators -bool true
+
+# - name: Wipe all (default) app icons from the Dock
+# - name: This is only really useful when setting up a new Mac, or if you don’t use
+# - name: the Dock to launch apps.
+# - name:defaults write com.apple.dock persistent-apps -array ""
+
+- name: Don’t animate opening applications from the Dock
+  shell: defaults write com.apple.dock launchanim -bool false
+
+- name: Speed up Mission Control animations
+  shell: defaults write com.apple.dock expose-animation-duration -float 0.1
+
+- name: Disable Dashboard
+  shell: defaults write com.apple.dashboard mcx-disabled -bool true
+
+- name: Don’t show Dashboard as a Space
+  shell: defaults write com.apple.dock dashboard-in-overlay -bool true
+
+- name: Remove the auto-hiding Dock delay
+  shell: defaults write com.apple.dock autohide-delay -float 0
+
+- name: Automatically hide and show the Dock
+  shell: defaults write com.apple.dock autohide -bool true
+
+# Hot corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Show application windows
+#  4: Desktop
+#  5: Start screen saver
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# Top left screen corner → Mission Control
+# defaults write com.apple.dock wvous-tl-corner -int 2
+# defaults write com.apple.dock wvous-tl-modifier -int 0
+# Top right screen corner → Desktop
+# defaults write com.apple.dock wvous-tr-corner -int 4
+# defaults write com.apple.dock wvous-tr-modifier -int 0
+# Bottom left screen corner → Start screen saver
+# defaults write com.apple.dock wvous-bl-corner -int 5
+# defaults write com.apple.dock wvous-bl-modifier -int 0
+
+- name: Prevent Safari from opening "safe" files automatically after downloading
+  shell: defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+- name: Allow hitting the Backspace key to go to the previous page in history
+  shell: defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+- name: Hide Safari’s bookmarks bar by default
+  shell: defaults write com.apple.Safari ShowFavoritesBar -bool false
+
+- name: Enable Safari’s debug menu
+  shell: defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+- name: Enable the Develop menu and the Web Inspector in Safari
+  shell: defaults write com.apple.Safari {{ item }} -bool true
+  with_items:
+    - IncludeDevelopMenu
+    - WebKitDeveloperExtrasEnabledPreferenceKey
+    - com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled
+
+- name: Add a context menu item for showing the Web Inspector in web views
+  shell: defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+- name: Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+  shell: defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+- name: Prevent Time Machine from prompting to use new hard drives as backup volume
+  shell: defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+- name: Enable the debug menu in Disk Utility
+  shell: defaults write com.apple.DiskUtility {{ item }} -bool true
+  with_items:
+    - DUDebugMenuEnabled
+    - advanced-image-options
+
+- name: Enable the WebKit Developer Tools in the Mac App Store
+  shell: defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+
+- name: Enable Debug Menu in the Mac App Store
+  shell: defaults write com.apple.appstore ShowDebugMenu -bool true

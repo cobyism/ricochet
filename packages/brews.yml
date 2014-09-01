@@ -3,7 +3,9 @@
   homebrew: name={{ item }}
   with_items:
     - ack
+    - boot2docker
     - curl
+    - docker
     - gh
     - git
     - heroku-toolbelt
