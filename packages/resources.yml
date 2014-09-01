@@ -2,5 +2,5 @@
 - name: Put Karabiner (formerly KeyRemap4MacBook) private.xml in place
   template: src=./resources/karabiner/private.xml dest=~/Library/Application Support/Karabiner/private.xml
 
-# - name: Install the Solarized Dark theme for iTerm
-#   shell: open "./resources/iterm/Solarized Dark.itermcolors"
+- name: Install the Solarized Dark theme for iTerm
+  shell: open "./resources/iterm/Solarized Dark.itermcolors"

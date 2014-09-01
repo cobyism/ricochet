@@ -5,6 +5,7 @@
     - include: packages/casks.yml     tags=apps
     - include: packages/cronjobs.yml  tags=setup
     - include: packages/dotfiles.yml  tags=dotfiles
+    - include: packages/fonts.yml     tags=apps
     - include: packages/gems.yml      tags=dev
     - include: packages/npms.yml      tags=dev
     - include: packages/osx.yml       tags=setup
