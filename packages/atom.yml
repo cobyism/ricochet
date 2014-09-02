@@ -1,0 +1,29 @@
+---
+- name: Install Atom packages
+  shell: apm install {{ item }}
+  with_items:
+    - alignment
+    - atom-color-highlight
+    - atom-lint
+    - atom-monokai
+    - atom-monokai-dark
+    - atom-prettify
+    - autocomplete-plus
+    - color-picker
+    - electron-dark-syntax
+    - emmet
+    - flatui
+    - flatui-dark
+    - git-blame
+    - merge-conflicts
+    - monokai
+    - neutron-syntax
+    - neutron-ui
+    - project-palette-finder
+    - saturn-syntax
+    - sort-lines
+    - toggle-quotes
+    - unity-ui
+    - visual-bell
+    - zenburn
+    - zen

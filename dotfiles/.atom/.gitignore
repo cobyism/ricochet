@@ -1,0 +1,5 @@
+# Ignore machine-specific Atom stuff
+.node-gyp/
+compile-cache/
+storage/
+packages/

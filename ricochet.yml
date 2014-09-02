@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
   tasks:
+    - include: packages/atom.yml      tags=atom
     - include: packages/brews.yml     tags=apps
     - include: packages/casks.yml     tags=apps
     - include: packages/cronjobs.yml  tags=setup

@@ -10,6 +10,7 @@
         dest=~/{{ item }}
         state=link
   with_items:
+    - .atom
     - .js
     - .maid
     - .gemrc
