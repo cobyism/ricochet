@@ -15,6 +15,8 @@ print_help(){
   echo "  dev      - install all ruby gems and npm packages"
   echo "  dotfiles - set up symlinks for all dotfiles"
   echo "  setup    - install osx defaults, cron jobs, and misc files"
+  echo "  open     - open ricochet repo in your editor"
+  echo "  open …   - open specified package list in your editor"
   echo "  help     - print this help message"
   echo
 }
@@ -26,11 +28,21 @@ if [ -z "$1" ]
 elif [ "$1" == "help" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]
   then
     print_help
+elif [ "$1" == "open" ]
+  then
+    echo "Reticulating splines…"
+    if [ -z "$2" ]
+      then
+      $EDITOR $RICOCHET
+    else
+      $EDITOR $RICOCHET
+      $EDITOR "$RICOCHET/packages/$2.yml"
+    fi
 elif [ "$1" == "all" ]
   then
     echo "One with the works, coming right up :)"
-    ansible-playbook ricochet.yml
+    ansible-playbook "$RICOCHET/ricochet.yml" -i "$RICOCHET/hosts"
 else
   echo "Just the $1 tasks? So be it."
-  ansible-playbook ricochet.yml --tags "$1"
+  ansible-playbook "$RICOCHET/ricochet.yml" -i "$RICOCHET/hosts" --tags "$1"
 fi
