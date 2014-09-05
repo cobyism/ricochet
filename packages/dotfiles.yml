@@ -18,6 +18,7 @@
     - .gitconfig
     - .gitignore
     - .guardrc
+    - .htoprc
     - .irbrc
     - .zshrc
     - tmux.conf
