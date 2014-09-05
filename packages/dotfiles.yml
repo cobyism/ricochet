@@ -11,6 +11,7 @@
         state=link
   with_items:
     - .atom
+    - .css
     - .js
     - .maid
     - .gemrc
