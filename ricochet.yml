@@ -11,3 +11,5 @@
     - include: packages/npms.yml      tags=dev
     - include: packages/osx.yml       tags=setup
     - include: packages/resources.yml tags=setup
+  handlers:
+    - include: packages/handlers.yml

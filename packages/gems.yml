@@ -1,6 +1,7 @@
 ---
 - name: Install Ruby Gems
-  gem: name={{ item }} state=latest
+  gem: name={{ item }} state=latest user_install=no executable="{{ lookup('env','RBENV_ROOT') }}/shims/gem"
+  notify: rbenv rehash
   with_items:
     - maid
     - dimensions # For maid
