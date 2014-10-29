@@ -6,3 +6,5 @@
   'ctrl-alt-,': 'emmet:prev-edit-point'
   'ctrl-A': 'emmet:increment-number-by-1'
   'ctrl-X': 'emmet:decrement-number-by-1'
+  'ctrl-alt-cmd-|': 'tree-view:show'
+  'ctrl-alt-cmd-A': 'tree-view:add-file'

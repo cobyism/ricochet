@@ -17,8 +17,10 @@
     - git-blame
     - merge-conflicts
     - monokai
+    - minimap
     - neutron-syntax
     - neutron-ui
+    - project-manager
     - project-palette-finder
     - saturn-syntax
     - sort-lines

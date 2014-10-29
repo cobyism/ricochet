@@ -15,6 +15,7 @@
     - htop-osx
     - hugo
     - ntfs-3g
+    - plt-racket
     - reattach-to-user-namespace # required for tmux!
     - the_silver_searcher
     - tig

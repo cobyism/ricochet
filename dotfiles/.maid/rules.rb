@@ -16,6 +16,9 @@ Maid.rules do
           rename(path, new_path)
         end
       end
+
+      # if media_type(path) == "video"
+      # end
     end
   end
 end

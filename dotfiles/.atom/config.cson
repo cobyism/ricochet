@@ -1,52 +1,49 @@
-'editor':
-  'autoIndentOnPaste': true
-  'hideGitIgnoredFiles': false
-  'softWrapAtPreferredLineLength': true
-  'softWrap': true
-  'showIndentGuide': true
-  'preferredLineLength': 120
-  'showInvisibles': true
-  'fontFamily': 'Source Code Pro'
-'core':
-  'hideGitIgnoredFiles': false
-  'disabledPackages': [
-    'wrap-guide'
-    'autocomplete-plus'
-    'metrics'
-    'exception-reporting'
-    'welcome'
-    'autoclose-html'
-    'git-plus'
-    'linter-csslint'
-    'linter-jshint'
-    'linter-coffeelint'
-    'linter-rubocop'
-    'linter-scss-lint'
-    'linter'
-    'vim-mode'
-  ]
-  'useReactEditor': true
-  'themes': [
-    'neutron-ui'
-    'saturn-syntax'
-  ]
-'spell-check':
-  'grammars': [
-    'text.plain'
-    'source.gfm'
-    'text.git-commit'
-  ]
-'Rdio': {}
-'whitespace':
-  'ignoreWhitespaceOnCurrentLine': false
-'release-notes':
-  'viewedVersion': '0.95.0'
-'linter':
-  'showStatusBarWhenCursorIsInErrorRange': true
-'autoclose-html': {}
-'emmet':
-  'extensionsPath': '~/.dotfiles/emmet'
-'merge-conflicts':
-  'gitPath': '/opt/boxen/homebrew/bin/hub'
-'tree-view':
-  'showOnRightSide': true
+'global':
+  'editor':
+    'autoIndentOnPaste': true
+    'hideGitIgnoredFiles': false
+    'softWrapAtPreferredLineLength': true
+    'softWrap': true
+    'showIndentGuide': true
+    'preferredLineLength': 120
+    'showInvisibles': true
+    'fontFamily': 'Source Code Pro'
+    'invisibles': {}
+  'core':
+    'hideGitIgnoredFiles': false
+    'disabledPackages': [
+      'wrap-guide'
+      'autocomplete-plus'
+      'metrics'
+      'exception-reporting'
+      'welcome'
+      'autoclose-html'
+      'linter-csslint'
+      'linter-jshint'
+      'linter-coffeelint'
+      'linter-rubocop'
+      'linter-scss-lint'
+      'linter'
+      'vim-mode'
+    ]
+    'useReactEditor': true
+  'spell-check':
+    'grammars': [
+      'text.plain'
+      'source.gfm'
+      'text.git-commit'
+    ]
+  'whitespace':
+    'ignoreWhitespaceOnCurrentLine': false
+  'release-notes':
+    'viewedVersion': '0.95.0'
+  'linter':
+    'showStatusBarWhenCursorIsInErrorRange': true
+  'emmet':
+    'extensionsPath': '~/.dotfiles/emmet'
+  'merge-conflicts':
+    'gitPath': '/opt/boxen/homebrew/bin/hub'
+  'tree-view':
+    'showOnRightSide': true
+  'atom-lint':
+    'showViolationMetadata': false
