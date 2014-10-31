@@ -5,64 +5,63 @@
     - alfred
     - appcleaner
     - arq
-    - atom
-    - bartender
-    - bettertouchtool
+    # - atom
+    # - bartender
+    # - bettertouchtool
     - chicken
     - cloud
-    - coda
-    - colloquy
-    - cyberduck
+    # - coda
+    # - colloquy
+    # - cyberduck
     - daisydisk
     - dropbox
     - ffmpegx
     - firefox
     - flux
     - gfxcardstatus
-    - github
-    - gitx
-    - google-chrome
-    - gravit
+    # - github # Installed by boxen
+    # - gitx
+    # - google-chrome # Needs to be moved to /Application folder, so better install manually.
+    # - gravit
     - handbrake
     - imageoptim
-    - istat-menus
+    # - istat-menus
     - istumbler
     - iterm2
     - keyboard-cleaner
     - karabiner # used to be called keyremap4macbook
-    - kindle
-    - libreoffice
+    # - libreoffice
     - little-snitch
-    - macdown
-    - macvim
+    # - macdown
+    # - macvim
     - node-webkit
     - nosleep
-    - omnifocus
+    # - omnifocus
     - omnigraffle
     - omnioutliner
-    - onepassword
-    - opera
-    - rdio
-    - rescuetime
+    # - onepassword
+    # - opera
+    # - rdio
+    # - rescuetime
     - screenhero
     - seil
     - sequel-pro
     - sizeup
     - skype
-    - slack
+    # - slack
     - sourcetree
-    - sublime-text
-    - synergy
-    - the-unarchiver
+    # - sublime-text
+    # - synergy
+    # - the-unarchiver
     - torbrowser
     - transmission
     - transmit
     - truecrypt
     - virtualbox
-    - viscosity
+    # - viscosity
     - vlc
-    - vmware-fusion
-    - wireshark
+    # - vmware-fusion
+    # - wireshark
     - xscope
 - name: Ensure Alfred’s scopes include cask apps
   shell: brew cask alfred link

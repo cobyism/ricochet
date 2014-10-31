@@ -8,7 +8,6 @@
     'preferredLineLength': 120
     'showInvisibles': true
     'fontFamily': 'Source Code Pro'
-    'invisibles': {}
   'core':
     'hideGitIgnoredFiles': false
     'disabledPackages': [

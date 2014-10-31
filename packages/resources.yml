@@ -4,3 +4,6 @@
 
 - name: Install the Solarized Dark theme for iTerm
   shell: open "./resources/iterm/Solarized Dark.itermcolors"
+
+- name: Install the Solarized Dark theme for Terminal
+  shell: open "./resources/terminal/Solarized Dark.terminal"

@@ -2,14 +2,14 @@
 - hosts: localhost
   tasks:
     - include: packages/atom.yml      tags=atom
-    - include: packages/brews.yml     tags=apps
-    - include: packages/casks.yml     tags=apps
-    - include: packages/cronjobs.yml  tags=setup
+    - include: packages/brews.yml     tags=apps,brews
+    - include: packages/casks.yml     tags=apps,casks
+    - include: packages/cronjobs.yml  tags=setup,cron
     - include: packages/dotfiles.yml  tags=dotfiles
-    - include: packages/fonts.yml     tags=apps
-    - include: packages/gems.yml      tags=dev
-    - include: packages/npms.yml      tags=dev
-    - include: packages/osx.yml       tags=setup
-    - include: packages/resources.yml tags=setup
+    - include: packages/fonts.yml     tags=apps,fonts
+    - include: packages/gems.yml      tags=dev,gems
+    - include: packages/npms.yml      tags=dev,npms
+    - include: packages/osx.yml       tags=setup,osx
+    - include: packages/resources.yml tags=setup,resources
   handlers:
     - include: packages/handlers.yml

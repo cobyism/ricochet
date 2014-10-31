@@ -8,13 +8,13 @@
     - boot2docker
     - curl
     - docker
-    - gh
+    # - gh # it looks like boxen removes this?
     - git
     - go
     - heroku-toolbelt
     - htop-osx
     - hugo
-    - ntfs-3g
+    # - ntfs-3g # Needs full Xcode install, not just command line tools
     - plt-racket
     - reattach-to-user-namespace # required for tmux!
     - the_silver_searcher
