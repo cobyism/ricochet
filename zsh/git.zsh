@@ -33,3 +33,4 @@ alias grma="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias grv='git remote -v'
 alias gs='git status -sb'
 alias distpush='git subtree push --prefix dist origin gh-pages'
+alias gbs='git branch-status'
