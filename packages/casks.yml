@@ -8,6 +8,7 @@
     # - atom
     # - bartender
     # - bettertouchtool
+    - calibre
     - chicken
     - cloud
     # - coda
@@ -57,6 +58,7 @@
     - transmission
     - transmit
     - truecrypt
+    - vagrant
     - virtualbox
     # - viscosity
     - vlc

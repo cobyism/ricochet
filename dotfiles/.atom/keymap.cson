@@ -8,3 +8,12 @@
   'ctrl-X': 'emmet:decrement-number-by-1'
   'ctrl-alt-cmd-|': 'tree-view:show'
   'ctrl-alt-cmd-A': 'tree-view:add-file'
+  'ctrl-alt-shift-cmd-enter': 'snippets:expand'
+  'ctrl-alt-shift-cmd-enter': 'emmet:expand-abbreviation'
+  'ctrl-alt-shift-cmd-w': 'emmet:wrap-with-abbreviation'
+  'ctrl-alt-shift-cmd-g': 'git-diff:move-to-next-diff'
+  'ctrl-alt-shift-cmd-k': 'editor:move-line-up'
+  'ctrl-alt-shift-cmd-j': 'editor:move-line-down'
+
+'.workspace':
+  'ctrl-)': 'tree-view:toggle-side'

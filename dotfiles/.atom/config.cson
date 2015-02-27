@@ -1,48 +1,57 @@
-'global':
-  'editor':
-    'autoIndentOnPaste': true
-    'hideGitIgnoredFiles': false
-    'softWrapAtPreferredLineLength': true
-    'softWrap': true
-    'showIndentGuide': true
-    'preferredLineLength': 120
-    'showInvisibles': true
-    'fontFamily': 'Source Code Pro'
-  'core':
-    'hideGitIgnoredFiles': false
-    'disabledPackages': [
-      'wrap-guide'
-      'autocomplete-plus'
-      'metrics'
-      'exception-reporting'
-      'welcome'
-      'autoclose-html'
-      'linter-csslint'
-      'linter-jshint'
-      'linter-coffeelint'
-      'linter-rubocop'
-      'linter-scss-lint'
-      'linter'
-      'vim-mode'
+"*":
+  editor:
+    fontFamily: "Source Code Pro"
+    showInvisibles: true
+    showIndentGuide: true
+    autoIndentOnPaste: false
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    invisibles: {}
+    preferredLineLength: 200
+    fontSize: 17
+  core:
+    disabledPackages: [
+      "wrap-guide"
+      "autocomplete-plus"
+      "metrics"
+      "exception-reporting"
+      "welcome"
+      "autoclose-html"
+      "linter-csslint"
+      "linter-jshint"
+      "linter-coffeelint"
+      "linter-rubocop"
+      "linter-scss-lint"
+      "linter"
     ]
-    'useReactEditor': true
-  'spell-check':
-    'grammars': [
-      'text.plain'
-      'source.gfm'
-      'text.git-commit'
+    themes: [
+      "one-dark-ui"
+      "one-dark-syntax"
     ]
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
-  'release-notes':
-    'viewedVersion': '0.95.0'
-  'linter':
-    'showStatusBarWhenCursorIsInErrorRange': true
-  'emmet':
-    'extensionsPath': '~/.dotfiles/emmet'
-  'merge-conflicts':
-    'gitPath': '/opt/boxen/homebrew/bin/hub'
-  'tree-view':
-    'showOnRightSide': true
-  'atom-lint':
-    'showViolationMetadata': false
+    projectHome: "/Users/cobyism/code"
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
+    ]
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  "release-notes":
+    viewedVersion: "0.95.0"
+  linter:
+    showStatusBarWhenCursorIsInErrorRange: true
+  emmet:
+    extensionsPath: "~/.dotfiles/emmet"
+  "merge-conflicts":
+    gitPath: "/opt/boxen/homebrew/bin/hub"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    showOnRightSide: true
+  "atom-lint":
+    showViolationMetadata: false
+  "autocomplete-plus":
+    autoActivationDelay: 1500
+  "atom-color-highlight": {}
+  atomatigit: {}
+  minimap: {}

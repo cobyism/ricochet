@@ -14,8 +14,10 @@
     - heroku-toolbelt
     - htop-osx
     - hugo
+    - imagemagick
     # - ntfs-3g # Needs full Xcode install, not just command line tools
     - plt-racket
+    - postgresql
     - reattach-to-user-namespace # required for tmux!
     - the_silver_searcher
     - tig

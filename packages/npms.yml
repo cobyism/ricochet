@@ -5,4 +5,5 @@
     - bower
     - coffee-script
     - gulp
+    - lineman
     - yo
