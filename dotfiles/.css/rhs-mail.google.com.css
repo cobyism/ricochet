@@ -1,0 +1,16 @@
+/* Stick the inbox list on the right. */
+.aeN,
+.aeN.nn {
+  float: right;
+}
+
+/* Give the main pane some left-padding. */
+.aeH,
+.AO {
+  padding-left: 30px;
+}
+
+/* Sidebar where ads usually are. */
+.y3 {
+  display: none;
+}

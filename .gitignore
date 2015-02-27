@@ -1,1 +1,4 @@
 tmp/
+
+dotfiles/.atom/.apm/*
+dotfiles/.atom/projects.cson
