@@ -1,27 +1,39 @@
 ---
 - name: Update Homebrew first
   homebrew: update_homebrew=yes
+- homebrew_tap: tap=caskroom/cask
+- homebrew_tap: tap=homebrew/dupes
+- homebrew_tap: tap=homebrew/versions
+- homebrew_tap: tap=homebrew/php
 - name: Install Homebrew Packages
   homebrew: name={{ item }}
   with_items:
     - ack
     - boot2docker
+    - brew-cask
+    - cask
+    - composer
     - curl
     - docker
-    # - gh # it looks like boxen removes this?
+    - fdupes
     - git
-    - go
     - heroku-toolbelt
     - htop-osx
     - hugo
     - imagemagick
-    # - ntfs-3g # Needs full Xcode install, not just command line tools
+    - php-version
+    - php56
     - plt-racket
     - postgresql
+    - python
+    - rdfind
     - reattach-to-user-namespace # required for tmux!
+    - redis
     - the_silver_searcher
     - tig
     - tmux
+    - tree
+    - vim
     - watch
     - wget
     - zsh

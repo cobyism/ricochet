@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Install homebrew
+# Install ansible
+# Install git
+
+brew install caskroom/cask/brew-cask
