@@ -17,5 +17,11 @@ then
   source /opt/boxen/env.sh
 fi
 
+# Initialize nodenv
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+
+# Initialize php-version
+source $(brew --prefix php-version)/php-version.sh && php-version 5
+
 # Initialize rbenv
 eval "$(rbenv init -)"
