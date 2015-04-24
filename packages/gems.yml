@@ -4,7 +4,6 @@
   notify: rbenv rehash
   with_items:
     - maid
-    - dimensions # For maid
     - jekyll
     - github-pages
     - lunchy
