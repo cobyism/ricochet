@@ -4,6 +4,9 @@
   with_items:
     - bower
     - coffee-script
+    - ebook-convert
     - gulp
+    - gitbook-cli
+    - gitbook-plugin-autocover
     - lineman
     - yo

@@ -8,7 +8,6 @@
     softWrapAtPreferredLineLength: true
     invisibles: {}
     preferredLineLength: 200
-    fontSize: 17
   core:
     disabledPackages: [
       "wrap-guide"
@@ -52,3 +51,6 @@
   "atom-color-highlight": {}
   atomatigit: {}
   minimap: {}
+  "highlight-column":
+    opacity: 0.15
+    enableHighlight: false
