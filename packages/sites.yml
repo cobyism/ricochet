@@ -1,0 +1,7 @@
+---
+- name: Install boxen nginx site configurations for dev projects
+  template: src=./resources/nginx/{{ item }}.conf dest=/opt/boxen/config/nginx/sites/{{ item }}.conf
+  notify: nginx
+  with_items:
+    - trotup
+    - syncopate

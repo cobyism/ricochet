@@ -3,3 +3,7 @@
   shell: >
     eval "$(rbenv init -)";
     rbenv rehash
+
+- name: nginx
+  shell: nginx -s reload
+  sudo: yes
