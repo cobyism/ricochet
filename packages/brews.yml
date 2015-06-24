@@ -15,12 +15,14 @@
     - composer
     - curl
     - docker
+    - docker-compose
     - fdupes
     - git
     - heroku-toolbelt
     - htop-osx
     - hugo
     - imagemagick
+    - pandoc
     - php-version
     - php56
     - plt-racket

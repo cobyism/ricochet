@@ -8,6 +8,7 @@
     - calibre # TODO Also sudo ln -s /opt/homebrew-cask/Caskroom/calibre/latest/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
     - chicken
     - cloud
+    - colorpicker-skalacolor
     - daisydisk
     - dropbox
     - ffmpegx
@@ -20,12 +21,15 @@
     - istumbler
     - iterm2
     - keyboard-cleaner
+    - kitematic
     # - karabiner # used to be called keyremap4macbook
     - little-snitch
     - nosleep
+    - postgres # Postgres.app, to get 9.4.x without conflicting with boxen’s version
     - screenhero
     - seil # used to be called PCKeyboardHack
     - sequel-pro
+    - sigil
     - sizeup
     - skype
     - slack

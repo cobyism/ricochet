@@ -2,16 +2,14 @@
   editor:
     fontFamily: "Source Code Pro"
     showInvisibles: true
-    showIndentGuide: true
-    autoIndentOnPaste: false
     softWrap: true
     softWrapAtPreferredLineLength: true
     invisibles: {}
-    preferredLineLength: 200
+    preferredLineLength: 140
+    showIndentGuide: true
   core:
     disabledPackages: [
       "wrap-guide"
-      "autocomplete-plus"
       "metrics"
       "exception-reporting"
       "welcome"
@@ -23,8 +21,19 @@
       "linter-scss-lint"
       "linter"
       "symbols-tree-view"
+      "vim-mode"
+      "minimap"
+      "merge-conflicts"
+      "git-tab-status"
+      "git-log"
+      "atom-pair"
+      "atom-beautify"
     ]
     projectHome: "/Users/cobyism/code"
+    themes: [
+      "one-dark-ui"
+      "oceanic-reef-syntax"
+    ]
   "spell-check":
     grammars: [
       "text.plain"
@@ -46,11 +55,20 @@
     showOnRightSide: true
   "atom-lint":
     showViolationMetadata: false
-  "autocomplete-plus":
-    autoActivationDelay: 1500
+  "autocomplete-plus": {}
   "atom-color-highlight": {}
   atomatigit: {}
   minimap: {}
   "highlight-column":
     opacity: 0.15
     enableHighlight: false
+  "one-dark-ui":
+    fontSize: 12
+    layoutMode: "Compact"
+  "vim-mode": {}
+  "save-session":
+    dataSaveFolder: "/Users/cobyism/code/ricochet/dotfiles/.atom/packages/save-session/projects"
+  "isotope-ui":
+    lowContrastTooltip: true
+    backgroundGradient: true
+    fontFamily: "Source Sans Pro"

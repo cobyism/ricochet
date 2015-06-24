@@ -6,3 +6,6 @@ export PATH="$HOME/node_modules/.bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 export PATH="$PATH:/usr/local/share/npm/bin"
 export PATH="$PATH:/opt/boxen/nvm/v0.8.8/bin"
+
+# For Postgres.app versions of pg_dump etc.
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"

@@ -7,3 +7,5 @@
     - jekyll
     - github-pages
     - lunchy
+    - dokku-cli
+    - dokkufy

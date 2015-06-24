@@ -8,6 +8,7 @@ alias fs='foreman start'
 alias j='jekyll serve --watch'
 alias y='yeoman'
 alias be='bundle exec'
+alias re='rbenv exec'
 alias ghgh='cd ~/github/github'
 alias tu="cd ~/code/trotup"
 alias updatedb='sudo /usr/libexec/locate.updatedb'
