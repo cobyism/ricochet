@@ -7,6 +7,6 @@
     - ebook-convert
     - gulp
     - gitbook-cli
-    - gitbook-plugin-autocover
+    # - gitbook-plugin-autocover
     - lineman
     - yo

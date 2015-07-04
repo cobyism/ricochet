@@ -9,3 +9,6 @@ export PATH="$PATH:/opt/boxen/nvm/v0.8.8/bin"
 
 # For Postgres.app versions of pg_dump etc.
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+
+# For pandoc/LaTeX
+export PATH="$PATH:/usr/texbin"

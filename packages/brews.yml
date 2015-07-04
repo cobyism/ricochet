@@ -16,6 +16,7 @@
     - curl
     - docker
     - docker-compose
+    - docker-machine
     - fdupes
     - git
     - heroku-toolbelt
@@ -23,8 +24,6 @@
     - hugo
     - imagemagick
     - pandoc
-    - php-version
-    - php56
     - plt-racket
     - postgresql
     - python

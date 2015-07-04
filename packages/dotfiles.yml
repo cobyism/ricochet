@@ -17,7 +17,7 @@
     - .gemrc
     - .gitconfig
     - .gitignore
-    - .guardrc
+    # - .guardrc
     - .htoprc
     - .irbrc
     - .zshrc
