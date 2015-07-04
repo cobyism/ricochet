@@ -2,40 +2,40 @@
 - name: Install Atom packages
   shell: apm install {{ item }}
   with_items:
-    - alignment
-    - atom-beautify
-    - atom-color-highlight
-    - atom-lint
-    - atom-pair
-    - autocomplete-plus
-    - color-picker
-    - emmet
-    - file-icons
-    - git-blame
-    - git-log
-    - git-plus
-    - git-tab-status
-    - highlight-column
-    - merge-conflicts
-    - minimap
-    - project-manager
-    - project-palette-finder
+    # - alignment
+    # - atom-beautify
+    # # - atom-color-highlight
+    # # - atom-lint
+    # - atom-pair
+    # - autocomplete-plus
+    # - color-picker
+    # - emmet
+    # - file-icons
+    # - git-blame
+    # - git-log
+    # - git-plus
+    # # - git-tab-status
+    # - highlight-column
+    # - merge-conflicts
+    # - minimap
+    # - project-manager
+    # - project-palette-finder
     - sort-lines
-    - toggle-quotes
-    - vim-mode
-    - visual-bell
-    - zen
+    # - toggle-quotes
+    # - vim-mode
+    # - visual-bell
+    # - zen
 - name: Install Atom themes
   shell: apm install {{ item }}
   with_items:
-    - atom-monokai
-    - atom-monokai-dark
-    - unity-ui
-    - saturn-syntax
-    - neutron-syntax
-    - neutron-ui
-    - monokai
-    - flatui
-    - flatui-dark
-    - electron-dark-syntax
+    # - atom-monokai
+    # - atom-monokai-dark
+    # - unity-ui
+    # - saturn-syntax
+    # - neutron-syntax
+    # - neutron-ui
+    # - monokai
+    # - flatui
+    # - flatui-dark
+    # - electron-dark-syntax
     - zenburn
