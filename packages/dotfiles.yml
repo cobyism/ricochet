@@ -21,4 +21,4 @@
     - .htoprc
     - .irbrc
     - .zshrc
-    - tmux.conf
+    - .tmux.conf
