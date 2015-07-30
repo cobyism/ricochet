@@ -24,6 +24,7 @@
     - kitematic
     # - karabiner # used to be called keyremap4macbook
     - little-snitch
+    - namechanger
     - nosleep
     - postgres # Postgres.app, to get 9.4.x without conflicting with boxen’s version
     - screenhero
