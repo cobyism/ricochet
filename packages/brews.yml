@@ -12,7 +12,6 @@
     - boot2docker
     - brew-cask
     - cask
-    - composer
     - curl
     - docker
     - docker-compose
