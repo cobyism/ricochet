@@ -5,6 +5,9 @@
 - name: Clone my old dotfiles repos
   git: repo=https://github.com/cobyism/dotfiles.git dest=~/code/dotfiles
 
+- name: Set up tmux plugin manager
+  git: repo=https://github.com/tmux-plugins/tpm.git dest=~/.tmux/plugins/tpm
+
 - name: Symlink dotfiles from this repo into place
   file: src=~/code/ricochet/dotfiles/{{ item }}
         dest=~/{{ item }}
