@@ -5,6 +5,7 @@
     - alfred
     - appcleaner
     - arq
+    - atom
     - calibre # TODO Also sudo ln -s /opt/homebrew-cask/Caskroom/calibre/latest/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
     - chicken
     - cloud
