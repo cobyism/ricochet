@@ -1,58 +1,73 @@
 #!/bin/bash
 
 echo ""
-echo "WELCOME TO RICOCHET!"
+echo "██████╗ ██╗ ██████╗ ██████╗  ██████╗██╗  ██╗███████╗████████╗";
+echo "██╔══██╗██║██╔════╝██╔═══██╗██╔════╝██║  ██║██╔════╝╚══██╔══╝";
+echo "██████╔╝██║██║     ██║   ██║██║     ███████║█████╗     ██║   ";
+echo "██╔══██╗██║██║     ██║   ██║██║     ██╔══██║██╔══╝     ██║   ";
+echo "██║  ██║██║╚██████╗╚██████╔╝╚██████╗██║  ██║███████╗   ██║   ";
+echo "╚═╝  ╚═╝╚═╝ ╚═════╝ ╚═════╝  ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ";
 echo ""
 
 export WHOAMI=`whoami`
 export RICOCHET="/Users/$WHOAMI/code/ricochet"
 
+abort() { echo "!!! $@" >&2; exit 1; }
+log()   { echo "--> $@"; }
+logn()  { echo "--> $@ "; echo ""; }
+logk()  { echo "OK"; }
+
+logn "Welcome to Ricochet!"
+
+#
+# Cloning / updating the Ricochet repository.
+#
+
 if [[ ! -d $RICOCHET ]]; then
-  echo "Hooking you up with an Ricochet in $RICOCHET…"
-  echo ""
+  logn "Hooking you up with an Ricochet in $RICOCHET…"
   git clone https://github.com/cobyism/ricochet $RICOCHET
 else
-  echo "Looks like you’ve already got Ricochet cloned. Attempting to update it…"
-  echo ""
+  logn "Looks like you’ve already got Ricochet cloned. Attempting to update it…"
   pushd $RICOCHET >/dev/null
   git pull
   popd >/dev/null
-  echo "I sure hope that worked… ¯\_(ツ)_/¯"
-  echo ""
+  logn "I sure hope that worked… ¯\_(ツ)_/¯"
 fi
+
+#
+# Running Strap (https://github.com/mikemcquaid/strap).
+#
 
 if [ ! command -v brew >/dev/null 2>&1 ] && [ ! command -v brew cask >/dev/null 2>&1 ]; then
-  echo "Let’s get you set up first by running strap…"
-  echo ""
+  logn "Let’s get you set up first by running strap…"
   if [ ! -f ~/Downloads/strap.sh ]; then
-    echo "It doesn’t look like you’ve downloaded strap.sh yet. Let me open that in a browser for you."
+    logn "It doesn’t look like you’ve downloaded strap.sh yet. Let me open that in a browser for you."
     open https://osx-strap.herokuapp.com/strap.sh
-    echo "Run this again once you’ve got strap.sh in ~/Downloads :)"
-    exit 1
+    abort "Run this again once you’ve got strap.sh in ~/Downloads :)"
   else
-    echo "Running strap.sh…"
-    echo ""
+    logn "Running strap.sh…"
     source ~/Downloads/strap.sh
-    echo ""
-    echo "Successfully finished running strap. Now, onto the good stuff!"
-    echo ""
+    logn "Successfully finished running strap. Now, onto the good stuff!"
   fi
 else
-  echo "Looks like this isn’t you’re first rodeo! Skipping straight to the good stuff."
-  echo ""
+  logn "Looks like this isn’t you’re first rodeo! Skipping straight to the good stuff."
 fi
+
+#
+# Ensuring Ansible is installed.
+#
 
 if ! command -v ansible-playbook >/dev/null 2>&1; then
-  echo "Looks like we ain’t got any ansible yet. Let’s do something about that, aye?"
-  echo ""
+  logn "Looks like we ain’t got any ansible yet. Let’s do something about that, aye?"
   brew install ansible
-  echo "Ansibled up."
-  echo ""
+  logn "Ansibled up."
 fi
 
-echo "Running Ricochet…"
-echo ""
+#
+# Running Ricochet for the first time.
+#
 
+logn "Running Ricochet…"
 $RICOCHET/bin/ricochet all
 
-echo "Bing! All done :)"
+logn "Bing! All done :)"
