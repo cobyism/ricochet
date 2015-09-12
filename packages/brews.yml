@@ -1,5 +1,7 @@
 ---
 
+- homebrew_tap: tap=homebrew/dupes
+
 - name: check homebrew prefix
   command: brew --prefix
   register: brew_prefix
@@ -14,11 +16,6 @@
 - name: conditionally update homebrew
   homebrew: update_homebrew=yes
   when: ansible_date_time.epoch|int - timestamp.stdout|int > 60 * 60 * 24
-
-# - homebrew_tap: tap=caskroom/cask
-# - homebrew_tap: tap=homebrew/services
-# - homebrew_tap: tap=homebrew/versions
-- homebrew_tap: tap=homebrew/dupes
 
 - name: Install Homebrew Packages
   homebrew: name={{ item }}
