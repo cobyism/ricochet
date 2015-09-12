@@ -4,6 +4,23 @@ echo ""
 echo "WELCOME TO RICOCHET!"
 echo ""
 
+export WHOAMI=`whoami`
+export RICOCHET="/Users/$WHOAMI/code/ricochet"
+
+if [[ ! -d $RICOCHET ]]; then
+  echo "Hooking you up with an Ricochet in $RICOCHET…"
+  echo ""
+  git clone https://github.com/cobyism/ricochet $RICOCHET
+else
+  echo "Looks like you’ve already got Ricochet cloned. Attempting to update it…"
+  echo ""
+  pushd $RICOCHET >/dev/null
+  git pull
+  popd >/dev/null
+  echo "I sure hope that worked… ¯\_(ツ)_/¯"
+  echo ""
+fi
+
 if [ ! command -v brew >/dev/null 2>&1 ] && [ ! command -v brew cask >/dev/null 2>&1 ]; then
   echo "Let’s get you set up first by running strap…"
   echo ""
@@ -11,6 +28,7 @@ if [ ! command -v brew >/dev/null 2>&1 ] && [ ! command -v brew cask >/dev/null 
     echo "It doesn’t look like you’ve downloaded strap.sh yet. Let me open that in a browser for you."
     open https://osx-strap.herokuapp.com/strap.sh
     echo "Run this again once you’ve got strap.sh in ~/Downloads :)"
+    exit 1
   else
     echo "Running strap.sh…"
     echo ""
@@ -34,7 +52,7 @@ fi
 
 echo "Running Ricochet…"
 echo ""
-export RICOCHET=/Users/cobyism/code/ricochet
+
 $RICOCHET/bin/ricochet all
 
 echo "Bing! All done :)"
