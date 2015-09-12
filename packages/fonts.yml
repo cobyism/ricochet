@@ -4,6 +4,7 @@
   homebrew_cask: name={{ item }}
   with_items:
     # Monospace fonts
+    # - font-hack Doesn’t exist yet (get from https://github.com/chrissimpkins/Hack)
     - font-inconsolata
     - font-input
     - font-anonymous-pro
