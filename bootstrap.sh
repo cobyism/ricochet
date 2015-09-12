@@ -47,6 +47,8 @@ if [ ! command -v brew >/dev/null 2>&1 ] && [ ! command -v brew cask >/dev/null 
   else
     logn "Running strap.sh…"
     source ~/Downloads/strap.sh
+    logn "Removing strap-created .gitconfig, because we get it via Ricochet"
+    rm ~/.gitconfig
     logn "Successfully finished running strap. Now, onto the good stuff!"
   fi
 else
