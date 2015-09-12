@@ -1,17 +1,15 @@
 ---
 - name: Update Homebrew first
   homebrew: update_homebrew=yes
-- homebrew_tap: tap=caskroom/cask
+# - homebrew_tap: tap=caskroom/cask
+# - homebrew_tap: tap=homebrew/services
+# - homebrew_tap: tap=homebrew/versions
 - homebrew_tap: tap=homebrew/dupes
-- homebrew_tap: tap=homebrew/versions
-- homebrew_tap: tap=homebrew/php
 - name: Install Homebrew Packages
   homebrew: name={{ item }}
   with_items:
     - ack
     - boot2docker
-    - brew-cask
-    - cask
     - curl
     - docker
     - docker-compose
@@ -20,11 +18,10 @@
     - git
     - heroku-toolbelt
     - htop-osx
-    - hugo
     - imagemagick
     - ncdu
-    - pandoc
-    - plt-racket
+    # - pandoc
+    # - plt-racket
     - postgresql
     - python
     - rdfind

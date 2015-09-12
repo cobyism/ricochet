@@ -47,7 +47,7 @@
 [hub]
 	protocol = https
 [credential]
-	helper = /opt/boxen/bin/boxen-git-credential
+	helper = osxkeychain
 [filter "media"]
 	required = true
 	clean = git media clean %f
