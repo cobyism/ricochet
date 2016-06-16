@@ -23,13 +23,14 @@
     - ack
     - boot2docker
     - curl
-    - docker
-    - docker-compose
-    - docker-machine
+    # - docker
+    # - docker-compose
+    # - docker-machine
     - fdupes
     - git
     - heroku-toolbelt
     - htop-osx
+    - hub
     - imagemagick
     - ncdu
     # - pandoc

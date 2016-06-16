@@ -21,10 +21,11 @@
 	branch = auto
 	ui = auto
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = /Users/cobyism/.gitignore
 	autocrlf = input
 	quotepath = false
 	editor = vim
+	pager = diff-so-fancy | less --tabs=1,5 -R
 [apply]
 	whitespace = nowarn
 [format]

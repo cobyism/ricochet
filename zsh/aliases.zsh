@@ -19,3 +19,6 @@ alias ia="open $1 -a /Applications/iA\ Writer.app"
 alias wp="open $1 -a /Applications/iA\ Writer\ Pro.app"
 alias a="atom"
 alias cask="brew cask"
+
+# Hub => git
+eval "$(hub alias -s)"

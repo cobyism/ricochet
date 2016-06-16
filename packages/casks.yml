@@ -8,9 +8,9 @@
     - atom
     - calibre # TODO Also sudo ln -s /opt/homebrew-cask/Caskroom/calibre/latest/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
     - chicken
-    - cloud
     - colorpicker-skalacolor
     - daisydisk
+    - dockertoolbox
     - dropbox
     - ffmpegx
     - firefox
@@ -27,6 +27,7 @@
     - little-snitch
     - namechanger
     - nosleep
+    - osxfuse
     - postgres # Postgres.app, to get 9.4.x without conflicting with boxen’s version
     - screenhero
     - seil # used to be called PCKeyboardHack

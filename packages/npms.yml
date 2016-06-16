@@ -4,6 +4,7 @@
   with_items:
     - bower
     - coffee-script
+    - diff-so-fancy
     - ebook-convert
     - gulp
     - gitbook-cli

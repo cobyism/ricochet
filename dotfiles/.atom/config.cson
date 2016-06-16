@@ -1,68 +1,102 @@
 "*":
-  editor:
-    fontFamily: "Hack, Source Code Pro"
-    showInvisibles: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
-    invisibles:
-      space: "‧"
-      eol: "↩"
-    preferredLineLength: 140
-    showIndentGuide: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "749926e3-48ee-48ff-86dd-0658a86a8110"
+    js:
+      indent_size: 2
+  "atom-color-highlight": {}
+  "atom-css-comb": {}
+  "atom-csscomb": {}
+  "atom-lint":
+    showViolationMetadata: false
+  atomatigit: {}
+  "autocomplete-plus": {}
+  autosave:
+    enabled: true
   core:
+    closeEmptyWindows: false
     disabledPackages: [
       "wrap-guide"
       "metrics"
       "exception-reporting"
       "welcome"
       "autoclose-html"
-      "linter-csslint"
       "linter-jshint"
-      "linter-coffeelint"
       "linter-rubocop"
       "linter-scss-lint"
-      "linter"
       "symbols-tree-view"
       "git-tab-status"
       "git-log"
-      "atom-beautify"
+      "language-gfm"
+      "linter-shellcheck"
+      "linter-htmlhint"
+      "linter-csslint"
+      "linter-tidy"
+      "linter"
     ]
     projectHome: "/Users/cobyism/code"
+    themes: [
+      "one-dark-ui"
+      "an-old-hope-syntax"
+    ]
+  editor:
+    backUpBeforeSaving: true
+    fontFamily: "Office Code Pro, Fira Code, Hack, Source Code Pro"
+    invisibles:
+      eol: "↩"
+      space: "‧"
+    preferredLineLength: 140
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  emmet:
+    extensionsPath: "~/.dotfiles/emmet"
+  "highlight-column":
+    enableHighlight: false
+    opacity: 0.15
+  "isotope-ui":
+    backgroundGradient: true
+    fontFamily: "Source Sans Pro"
+    lowContrastTooltip: true
+  linter:
+    showStatusBarWhenCursorIsInErrorRange: true
+  "markdown-preview": {}
+  "merge-conflicts":
+    gitPath: "/opt/boxen/homebrew/bin/hub"
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "one-dark-ui":
+    fontSize: 12
+    layoutMode: "Compact"
+  "project-manager":
+    closeCurrent: true
+  "release-notes":
+    viewedVersion: "0.95.0"
+  "save-session":
+    dataSaveFolder: "/Users/cobyism/code/ricochet/dotfiles/.atom/packages/save-session/projects"
   "spell-check":
     grammars: [
       "text.plain"
       "source.gfm"
       "text.git-commit"
     ]
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-  "release-notes":
-    viewedVersion: "0.95.0"
-  linter:
-    showStatusBarWhenCursorIsInErrorRange: true
-  emmet:
-    extensionsPath: "~/.dotfiles/emmet"
-  "merge-conflicts":
-    gitPath: "/opt/boxen/homebrew/bin/hub"
+  tabs:
+    usePreviewTabs: true
   "tree-view":
     hideVcsIgnoredFiles: true
     showOnRightSide: true
-  "atom-lint":
-    showViolationMetadata: false
-  "autocomplete-plus": {}
-  "atom-color-highlight": {}
-  atomatigit: {}
-  minimap: {}
-  "highlight-column":
-    opacity: 0.15
-    enableHighlight: false
-  "one-dark-ui":
-    fontSize: 12
-    layoutMode: "Compact"
   "vim-mode": {}
-  "save-session":
-    dataSaveFolder: "/Users/cobyism/code/ricochet/dotfiles/.atom/packages/save-session/projects"
-  "isotope-ui":
-    lowContrastTooltip: true
-    backgroundGradient: true
-    fontFamily: "Source Sans Pro"
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".md.text":
+  editor:
+    preferredLineLength: 140

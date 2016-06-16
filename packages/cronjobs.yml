@@ -1,3 +1,0 @@
----
-- name: Set up cron job for running maid ruleset
-  cron: name="run maid rules" minute="*/15" job="/bin/bash -li -c \"maid clean --force --silent\""

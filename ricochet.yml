@@ -10,7 +10,7 @@
     - include: packages/osx.yml       tags=setup,osx
     - include: packages/resources.yml tags=setup,resources
     - include: packages/sites.yml     tags=setup,sites
-    - include: packages/cronjobs.yml  tags=setup,cron
+    # - include: packages/services.yml  tags=setup,services
     - include: packages/atom.yml      tags=atom
   handlers:
     - include: packages/handlers.yml
