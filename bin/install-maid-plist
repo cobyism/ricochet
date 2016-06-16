@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+maid_executable = %x(which maid)
+plist_destination = File.expand_path("~/Library/LaunchAgents/benjaminoakes.maid.plist")
+plist = <<-EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+          "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>benjaminoakes.maid</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/bin/sh</string>
+      <string>-c</string>
+      <string>#{maid_executable} daemon</string>
+    </array>
+    <key>KeepAlive</key>
+    <true/>
+  </dict>
+</plist>
+EOF
+
+if File.exists?(plist_destination)
+  puts "Looks like you’ve already got a launch agent configured for maid. Aborting!"
+else
+  File.open(plist_destination, "w") { |f| f.write(plist) }
+  if load_agent = %x(launchctl load #{plist_destination})
+    puts "Launch agent configured for maid. Enjoy!"
+  else
+    puts "Couldn’t load the launch agent for some reason."
+  end
+end
