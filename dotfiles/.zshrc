@@ -11,17 +11,8 @@ then
   source ~/.localrc
 fi
 
-# Source boxen environment
-if [[ -a /opt/boxen/env.sh ]]
-then
-  source /opt/boxen/env.sh
-fi
-
 # Initialize nodenv
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Initialize rbenv
 eval "$(rbenv init -)"
-
-# Set up some more docker-machine stuff
-# eval "$(docker-machine env local)"
