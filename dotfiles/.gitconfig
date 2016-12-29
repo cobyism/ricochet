@@ -1,6 +1,7 @@
 [user]
 	name = Coby Chapple
 	email = coby@cobychapple.com
+	signingkey = 882A5AAEA34955EE
 [alias]
 	b = branch
 	cl = clone
