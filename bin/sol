@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'time'
+
+if ENV["MY_BDAY"]
+  bday = Time.parse(ENV["MY_BDAY"])
+  now  = Time.now
+
+  secs = (now - bday)
+  seconds_per_sol = 24 * 60 * 60
+  current_sol = secs / seconds_per_sol
+
+  puts current_sol.floor
+end

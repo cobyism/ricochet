@@ -16,7 +16,8 @@ plist = <<-EOF
       <string>-c</string>
       <string>#{maid_executable} daemon</string>
     </array>
-    <key>KeepAlive</key>
+    <key>StartInterval</key>
+    <integer>3600</integer>
     <true/>
   </dict>
 </plist>

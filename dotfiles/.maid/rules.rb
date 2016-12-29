@@ -1,7 +1,6 @@
 Maid.rules do
-  repeat '15m' do
+  # repeat '5m' do
     rule 'Sort Dropbox Camera Uploads into appropriate folders' do
-      puts "hello from #{Time.now}!"
       camera_uploads = "~/Dropbox (Personal)/Camera Uploads"
       files(File.join(camera_uploads, "*")).each do |path|
         if media_type(path) == "image"
@@ -31,5 +30,5 @@ Maid.rules do
         end
       end
     end
-  end
+  # end
 end

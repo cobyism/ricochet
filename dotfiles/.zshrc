@@ -11,8 +11,13 @@ then
   source ~/.localrc
 fi
 
+# For GPG commit signing
+export GPG_TTY=$(tty)
+
 # Initialize nodenv
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 # Initialize rbenv
 eval "$(rbenv init -)"
+
+export PATH="$HOME/.yarn/bin:$PATH"

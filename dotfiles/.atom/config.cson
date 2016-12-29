@@ -33,12 +33,9 @@
       "linter-csslint"
       "linter-tidy"
       "linter"
+      "activate-power-mode"
     ]
     projectHome: "/Users/cobyism/code"
-    themes: [
-      "one-dark-ui"
-      "an-old-hope-syntax"
-    ]
   editor:
     backUpBeforeSaving: true
     fontFamily: "Office Code Pro, Fira Code, Hack, Source Code Pro"
@@ -63,7 +60,7 @@
     showStatusBarWhenCursorIsInErrorRange: true
   "markdown-preview": {}
   "merge-conflicts":
-    gitPath: "/opt/boxen/homebrew/bin/hub"
+    gitPath: "/usr/local/bin/hub"
   minimap:
     plugins:
       cursorline: true
@@ -92,11 +89,31 @@
   tabs:
     usePreviewTabs: true
   "tree-view":
-    hideVcsIgnoredFiles: true
     showOnRightSide: true
   "vim-mode": {}
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+".erb.html.text":
+  editor:
+    preferredLineLength: 140
+".html.ruby.text":
+  editor:
+    preferredLineLength: 140
+".js.rails.source source.jquery.js":
+  editor:
+    preferredLineLength: 140
 ".md.text":
+  editor:
+    preferredLineLength: 140
+".rails.rjs.ruby.source":
+  editor:
+    preferredLineLength: 140
+".rails.ruby.source":
+  editor:
+    preferredLineLength: 140
+".ruby.source":
+  editor:
+    preferredLineLength: 140
+".ruby.source.sql":
   editor:
     preferredLineLength: 140

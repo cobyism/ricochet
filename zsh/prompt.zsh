@@ -28,12 +28,15 @@ function collapse_hostname {
   echo $(hostname -s | sed -e "s,^Vulcan,,")
 }
 
+function current_sol {
+  echo $(sol)
+}
+
 PROMPT='
 %{$fg_bold[red]%}$(collapse_pwd)%{$reset_color%}$(hg_prompt_info)$(git_prompt_info)
 $(virtualenv_info)$(prompt_char) '
 
-RPROMPT='%{$fg[red]%}$(rbenv_version)%{$reset_color%}'
-#RPROMPT=''
+RPROMPT='%{$fg[yellow]%}s$(current_sol)%{$reset_color%} ∙ %{$fg[red]%}$(rbenv_version)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" ⌥ %{$fg[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
